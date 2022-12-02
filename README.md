@@ -18,3 +18,10 @@ void CreateDynamicStatus(
   Func<BasePlayer, string> dynamicValue
 );
 ```
+
+# Code Examples
+
+``` charp
+Func<BasePlayer, bool> condition = (basePlayer) => { return basePlayer.secondsConnected < 60; };
+CustomStatusFramework.Call("CreateStatus", "New Player", "Welcome!", "0.3 0.6 0.9 1", "img_id_here", condition);
+```
